@@ -6,10 +6,10 @@
   <title>ALTA MAVERA — Принимающий DMC в Узбекистане | Quiet Luxury</title>
   <meta name="description" content="Принимающий партнер в Узбекистане класса Quiet Luxury. Закрытый доступ, VIP-протокол CIP, частная авиация.">
 
-  <!-- Google Fonts: Cinzel & Montserrat -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -18,7 +18,7 @@
         extend: {
           colors: {
             obsidian: { DEFAULT: '#060B14', deep: '#03060B', surface: '#0A111F', card: '#0D1627', border: '#1A263D' },
-            gold: { light: '#F5DEB3', DEFAULT: '#C5A265', muted: '#9E7E44', dark: '#685026' },
+            gold: { light: '#F9ECC7', DEFAULT: '#CBA768', muted: '#9E7E45', dark: '#634C20' },
             ivory: { DEFAULT: '#FBF9F5', surface: '#F4EFE6', border: '#E8E0D2', dark: '#1C1917', muted: '#635B50' }
           },
           fontFamily: {
@@ -38,17 +38,16 @@
     .hero-slide.active { opacity: 1; transform: scale(1.03); z-index: 2; }
     .hero-slide.inactive { opacity: 0; transform: scale(1); z-index: 1; }
 
-    /* Чистое золотое тиснение текста ALTA MAVERA как на картинке */
-    .brand-gold-title {
-      background: linear-gradient(180deg, #FFF9EA 0%, #E7C98C 35%, #B78D4A 70%, #DEBA78 100%);
+    /* Металлическое золотое тиснение надписи как в логотипе */
+    .brand-title-metallic {
+      background: linear-gradient(180deg, #FFF7E4 0%, #ECCF9A 32%, #C29F5D 65%, #8C6A2E 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px rgba(197, 162, 101, 0.4));
+      filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(203, 167, 104, 0.45));
     }
 
-    /* Эффект свечения для прозрачного векторного герба */
-    .brand-crest-vector {
-      filter: drop-shadow(0 0 16px rgba(197, 162, 101, 0.5)) drop-shadow(0 8px 22px rgba(0, 0, 0, 0.9));
+    .crest-shadow {
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 20px rgba(203, 167, 104, 0.5));
     }
   </style>
 </head>
@@ -59,19 +58,27 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-obsidian-deep/90 backdrop-blur-md border-b border-obsidian-border/70 py-3.5 px-6 md:px-12">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
-      <!-- Текстовый логотип в шапке (полностью независимый от файлов) -->
+      <!-- Логотип в шапке -->
       <a href="#hero" class="flex items-center gap-3.5 group">
-        <svg class="h-9 w-9 text-gold brand-crest-vector transition-transform duration-500 group-hover:scale-105" viewBox="0 0 120 90" fill="none">
-          <ellipse cx="60" cy="45" rx="54" ry="38" stroke="url(#goldHdr)" stroke-width="2.8"/>
-          <path d="M60 12 C44 24 41 42 41 74 L79 74 C79 42 76 24 60 12 Z" stroke="url(#goldHdr)" stroke-width="2.4" stroke-linecap="round"/>
-          <polygon points="60,18 62,25 69,27 63,32 65,39 60,35 55,39 57,32 51,27 58,25" fill="url(#goldHdr)"/>
-          <path d="M28 58 Q60 48 92 58" stroke="url(#goldHdr)" stroke-width="1.8"/>
-          <path d="M47 74 Q54 62 60 56 Q66 62 73 74" stroke="url(#goldHdr)" stroke-width="2.4"/>
+        <svg class="h-9 w-14 crest-shadow transition-transform duration-500 group-hover:scale-105" viewBox="0 0 260 170" fill="none">
+          <ellipse cx="130" cy="85" rx="114" ry="72" stroke="url(#gStrokeHdr)" stroke-width="6.5"/>
+          <ellipse cx="127" cy="88" rx="108" ry="67" stroke="url(#gStrokeHdr)" stroke-width="2" opacity="0.45"/>
+          <path d="M130 22 C120 38 98 48 98 84 L98 144 C112 149 148 149 162 144 L162 84 C162 48 140 38 130 22 Z" stroke="url(#gStrokeHdr)" stroke-width="5.5" stroke-linejoin="round"/>
+          <path d="M130 35 L132.8 49 L144 52.2 L134 56.6 L137 68 L130 60.5 L123 68 L126 56.6 L116 52.2 L127.2 49 Z" fill="url(#gFillHdr)"/>
+          <path d="M50 110 Q85 92 112 102 T180 96 T210 110" stroke="url(#gStrokeHdr)" stroke-width="2.5" opacity="0.65"/>
+          <path d="M128 106 C124 116 112 124 96 138 C118 146 148 146 164 122 C146 128 134 120 134 112 Z" fill="url(#gFillHdr)" opacity="0.85"/>
+          <path d="M128 106 C124 118 108 126 84 144" stroke="url(#gStrokeHdr)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M134 112 C134 122 146 132 174 142" stroke="url(#gStrokeHdr)" stroke-width="4.5" stroke-linecap="round"/>
           <defs>
-            <linearGradient id="goldHdr" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFF5DF" />
-              <stop offset="50%" stop-color="#C5A265" />
-              <stop offset="100%" stop-color="#937237" />
+            <linearGradient id="gStrokeHdr" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF9EA"/>
+              <stop offset="40%" stop-color="#DEBE80"/>
+              <stop offset="75%" stop-color="#A57F3A"/>
+              <stop offset="100%" stop-color="#E1C286"/>
+            </linearGradient>
+            <linearGradient id="gFillHdr" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF"/>
+              <stop offset="100%" stop-color="#CBA768"/>
             </linearGradient>
           </defs>
         </svg>
@@ -105,60 +112,82 @@
       <div id="slide-2" class="hero-slide inactive absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg2.jpeg');"></div>
       <div id="slide-3" class="hero-slide inactive absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg3.jpeg');"></div>
       
-      <!-- Прозрачная кинематографическая виньетка: без наложений и артефактов -->
+      <!-- Кинематографический градиент -->
       <div class="absolute inset-0 bg-obsidian-deep/55"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian-deep/75"></div>
     </div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center justify-center py-16">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center justify-center py-14">
       
-      <!-- ============================================================== -->
-      <!-- ПОЛНОСТЬЮ ТЕКСТОВЫЙ / ВЕКТОРНЫЙ ЛОГОТИП (БЕЗ ФАЙЛОВ И КАРТИНОК) -->
-      <!-- ============================================================== -->
+      <!-- =================================================================== -->
+      <!-- ОРИГИНАЛЬНЫЙ ГЕРБ И НАДПИСЬ ALTA MAVERA (ТОЧНАЯ СРИСОВКА С LOGO.JPG) -->
+      <!-- =================================================================== -->
       <div class="flex flex-col items-center justify-center mb-6">
         
-        <!-- Рисунок сверху из макета (Овал, арка, звезда, горы, дорога): 100% прозрачный -->
-        <svg class="w-36 h-28 sm:w-48 sm:h-36 md:w-56 md:h-40 brand-crest-vector transition-transform duration-700 hover:scale-105" viewBox="0 0 200 150" fill="none">
+        <!-- Вектор герба -->
+        <svg class="w-48 h-32 sm:w-64 sm:h-44 md:w-72 md:h-48 crest-shadow transition-transform duration-700 hover:scale-105" viewBox="0 0 260 170" fill="none">
           <defs>
-            <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFF9EC" />
-              <stop offset="35%" stop-color="#E5C384" />
-              <stop offset="70%" stop-color="#B28A47" />
-              <stop offset="100%" stop-color="#DEC080" />
+            <linearGradient id="goldRim" x1="15%" y1="0%" x2="85%" y2="100%">
+              <stop offset="0%" stop-color="#FFF9EA" />
+              <stop offset="28%" stop-color="#EBD098" />
+              <stop offset="55%" stop-color="#C29F5C" />
+              <stop offset="80%" stop-color="#8E6A2C" />
+              <stop offset="100%" stop-color="#E2C488" />
             </linearGradient>
-            <radialGradient id="starRadial" cx="50%" cy="50%" r="50%">
+
+            <linearGradient id="goldPortal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFBF0" />
+              <stop offset="35%" stop-color="#DFBE7E" />
+              <stop offset="70%" stop-color="#9C7733" />
+              <stop offset="100%" stop-color="#D9B774" />
+            </linearGradient>
+
+            <radialGradient id="starRadialExact" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#FFFFFF" />
-              <stop offset="100%" stop-color="#C5A265" />
+              <stop offset="30%" stop-color="#FFF4D8" />
+              <stop offset="70%" stop-color="#D9B56F" />
+              <stop offset="100%" stop-color="#997430" />
             </radialGradient>
+
+            <linearGradient id="roadRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFEFCB" />
+              <stop offset="50%" stop-color="#CBA461" />
+              <stop offset="100%" stop-color="#7A561E" />
+            </linearGradient>
           </defs>
 
-          <!-- Золотой овал -->
-          <ellipse cx="100" cy="72" rx="90" ry="60" stroke="url(#crestGold)" stroke-width="4.2"/>
-          
-          <!-- Восточный портал (купольная арка) -->
-          <path d="M100 20 C76 38 72 68 72 118 L128 118 C128 68 124 38 100 20 Z" stroke="url(#crestGold)" stroke-width="3.8" stroke-linecap="round"/>
-          
-          <!-- Звезда-путеводитель -->
-          <polygon points="100,28 103,42 115,45 105,51 108,63 100,55 92,63 95,51 85,45 97,42" fill="url(#starRadial)"/>
-          
-          <!-- Горные цепи на горизонте -->
-          <path d="M52 92 Q76 78 100 85 Q124 78 148 92" stroke="url(#crestGold)" stroke-width="2.6"/>
-          
-          <!-- Изгиб Шелкового пути к вершинам -->
-          <path d="M78 118 Q89 98 99 90 Q109 98 122 118" stroke="url(#crestGold)" stroke-width="3.4"/>
-          <path d="M88 118 Q96 105 101 99 Q106 105 112 118" stroke="url(#crestGold)" stroke-width="2.2"/>
+          <!-- 1. Наружный массивный эллипс с объемным скосом -->
+          <ellipse cx="130" cy="85" rx="114" ry="72" stroke="url(#goldRim)" stroke-width="6.5"/>
+          <ellipse cx="127" cy="88" rx="108" ry="67" stroke="url(#goldRim)" stroke-width="2.2" opacity="0.4"/>
+
+          <!-- 2. Стрельчатый восточный портал с луковичным куполом -->
+          <path d="M130 22 C120 38 98 48 98 84 L98 144 C112 149 148 149 162 144 L162 84 C162 48 140 38 130 22 Z" stroke="url(#goldPortal)" stroke-width="5.5" stroke-linejoin="round"/>
+          <path d="M130 29 C122 42 104 52 104 84 L104 140" stroke="url(#goldPortal)" stroke-width="1.8" opacity="0.45"/>
+
+          <!-- 3. Восьмиконечная звезда под куполом -->
+          <path d="M130 35 L132.8 49 L144 52.2 L134 56.6 L137 68 L130 60.5 L123 68 L126 56.6 L116 52.2 L127.2 49 Z" fill="url(#starRadialExact)"/>
+
+          <!-- 4. Горный хребет на горизонте -->
+          <path d="M46 112 Q80 94 108 104 T178 98 T214 112" stroke="url(#goldPortal)" stroke-width="2.4" opacity="0.6"/>
+          <path d="M70 114 Q95 101 120 108" stroke="url(#goldPortal)" stroke-width="1.8" opacity="0.4"/>
+
+          <!-- 5. Извилистая шелковая дорога на переднем плане -->
+          <path d="M128 106 C124 116 112 124 96 138 C118 146 148 146 164 122 C146 128 134 120 134 112 Z" fill="url(#roadRibbon)" opacity="0.9"/>
+          <path d="M128 106 C124 118 108 126 84 144" stroke="url(#goldPortal)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M134 112 C134 122 146 132 174 142" stroke="url(#goldPortal)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M130 108 C128 118 124 126 118 144" stroke="url(#goldPortal)" stroke-width="1.8" opacity="0.75"/>
         </svg>
 
-        <!-- Надпись ALTA MAVERA шрифтом Cinzel с золотым тиснением -->
-        <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.24em] brand-gold-title mt-2">
+        <!-- Надпись ALTA MAVERA -->
+        <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.24em] brand-title-metallic mt-3">
           ALTA MAVERA
         </h1>
 
-        <!-- Тонкая разделительная полоса с ромбом-звездой как в макете -->
-        <div class="flex items-center justify-center gap-3 w-64 sm:w-80 md:w-96 my-2">
-          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+        <!-- Золотая разделительная полоса с четырехконечной звездой-ромбом -->
+        <div class="flex items-center justify-center gap-3 w-64 sm:w-80 md:w-96 my-2.5">
+          <span class="h-[1.5px] flex-1 bg-gradient-to-r from-transparent via-gold/85 to-transparent"></span>
           <span class="text-gold text-xs leading-none">✦</span>
-          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+          <span class="h-[1.5px] flex-1 bg-gradient-to-r from-transparent via-gold/85 to-transparent"></span>
         </div>
 
       </div>
@@ -336,18 +365,12 @@
     <div class="max-w-4xl mx-auto flex flex-col items-center">
       
       <!-- Прозрачный герб в подвале -->
-      <svg class="h-11 w-11 text-gold brand-crest-vector mb-2.5" viewBox="0 0 120 90" fill="none">
-        <ellipse cx="60" cy="45" rx="54" ry="38" stroke="url(#goldFtr)" stroke-width="2.8"/>
-        <path d="M60 12 C44 24 41 42 41 74 L79 74 C79 42 76 24 60 12 Z" stroke="url(#goldFtr)" stroke-width="2.4" stroke-linecap="round"/>
-        <polygon points="60,18 62,25 69,27 63,32 65,39 60,35 55,39 57,32 51,27 58,25" fill="url(#goldFtr)"/>
-        <path d="M47 74 Q54 62 60 56 Q66 62 73 74" stroke="url(#goldFtr)" stroke-width="2.4"/>
-        <defs>
-          <linearGradient id="goldFtr" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFF5DF" />
-            <stop offset="50%" stop-color="#C5A265" />
-            <stop offset="100%" stop-color="#937237" />
-          </linearGradient>
-        </defs>
+      <svg class="h-10 w-16 crest-shadow mb-2.5" viewBox="0 0 260 170" fill="none">
+        <ellipse cx="130" cy="85" rx="114" ry="72" stroke="url(#gStrokeHdr)" stroke-width="6.5"/>
+        <path d="M130 22 C120 38 98 48 98 84 L98 144 C112 149 148 149 162 144 L162 84 C162 48 140 38 130 22 Z" stroke="url(#gStrokeHdr)" stroke-width="5.5" stroke-linejoin="round"/>
+        <path d="M130 35 L132.8 49 L144 52.2 L134 56.6 L137 68 L130 60.5 L123 68 L126 56.6 L116 52.2 L127.2 49 Z" fill="url(#gFillHdr)"/>
+        <path d="M128 106 C124 118 108 126 84 144" stroke="url(#gStrokeHdr)" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M134 112 C134 122 146 132 174 142" stroke="url(#gStrokeHdr)" stroke-width="4.5" stroke-linecap="round"/>
       </svg>
 
       <span class="font-cinzel text-lg font-bold tracking-[0.2em] text-white">ALTA MAVERA</span>
