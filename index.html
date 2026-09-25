@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALTA MAVERA — Принимающий DMC-оператор в Узбекистане | Quiet Luxury</title>
-  <meta name="description" content="Alta Mavera — принимающий DMC-партнер в Узбекистане класса Quiet Luxury. Закрытые частные маршруты, VIP-протокол CIP, приватная авиация и круглосуточный консьерж-сервис.">
-  <link rel="icon" type="image/png" href="logo.PNG">
+  <title>ALTA MAVERA — Принимающий DMC в Узбекистане | Quiet Luxury</title>
+  <meta name="description" content="Принимающий партнер в Узбекистане класса Quiet Luxury. Закрытый доступ, VIP-протокол CIP, частная авиация.">
 
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -18,123 +18,209 @@
         extend: {
           colors: {
             obsidian: { DEFAULT: '#060B14', deep: '#03060B', surface: '#0A111F', card: '#0D1627', border: '#1A263D' },
-            gold: { light: '#E2C792', DEFAULT: '#C5A265', muted: '#9E7E44', dark: '#685026', glow: 'rgba(197, 162, 101, 0.22)' },
+            gold: { light: '#F5DEB3', DEFAULT: '#C5A265', muted: '#9E7E44', dark: '#685026' },
             ivory: { DEFAULT: '#FBF9F5', surface: '#F4EFE6', border: '#E8E0D2', dark: '#1C1917', muted: '#635B50' }
           },
-          fontFamily: { cinzel: ['Cinzel', 'serif'], montserrat: ['Montserrat', 'sans-serif'] },
-          letterSpacing: { monumental: '0.28em', celestial: '0.4em' }
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif']
+          }
         }
       }
     }
   </script>
 
   <style>
-    .hero-slide { transition: opacity 2.2s cubic-bezier(0.4, 0, 0.2, 1), transform 9s cubic-bezier(0.25, 1, 0.5, 1); will-change: opacity, transform; }
-    .hero-slide.active { opacity: 1; transform: scale(1.04); z-index: 2; }
+    .hero-slide {
+      transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), transform 8s ease-out;
+      will-change: opacity, transform;
+    }
+    .hero-slide.active { opacity: 1; transform: scale(1.03); z-index: 2; }
     .hero-slide.inactive { opacity: 0; transform: scale(1); z-index: 1; }
-    .brand-logo-glow { filter: drop-shadow(0 0 24px rgba(197, 162, 101, 0.4)) drop-shadow(0 12px 30px rgba(0, 0, 0, 0.95)); image-rendering: -webkit-optimize-contrast; }
-    .bg-radial-vignette { background: radial-gradient(ellipse at center, rgba(6, 11, 20, 0.25) 0%, rgba(6, 11, 20, 0.85) 75%, #060B14 100%); }
+
+    /* Чистое золотое тиснение текста ALTA MAVERA как на картинке */
+    .brand-gold-title {
+      background: linear-gradient(180deg, #FFF9EA 0%, #E7C98C 35%, #B78D4A 70%, #DEBA78 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px rgba(197, 162, 101, 0.4));
+    }
+
+    /* Эффект свечения для прозрачного векторного герба */
+    .brand-crest-vector {
+      filter: drop-shadow(0 0 16px rgba(197, 162, 101, 0.5)) drop-shadow(0 8px 22px rgba(0, 0, 0, 0.9));
+    }
   </style>
 </head>
 
 <body class="bg-obsidian text-[#ECE7DF] font-montserrat antialiased selection:bg-gold selection:text-obsidian-deep overflow-x-hidden">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-obsidian-deep/85 backdrop-blur-md border-b border-obsidian-border/70 py-4 px-6 md:px-12">
+  <!-- ШАПКА -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-obsidian-deep/90 backdrop-blur-md border-b border-obsidian-border/70 py-3.5 px-6 md:px-12">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Текстовый логотип в шапке (полностью независимый от файлов) -->
       <a href="#hero" class="flex items-center gap-3.5 group">
-        <img src="logo.PNG" alt="Alta Mavera Crest" class="h-9 w-auto object-contain transition-transform duration-500 group-hover:scale-105 brand-logo-glow">
+        <svg class="h-9 w-9 text-gold brand-crest-vector transition-transform duration-500 group-hover:scale-105" viewBox="0 0 120 90" fill="none">
+          <ellipse cx="60" cy="45" rx="54" ry="38" stroke="url(#goldHdr)" stroke-width="2.8"/>
+          <path d="M60 12 C44 24 41 42 41 74 L79 74 C79 42 76 24 60 12 Z" stroke="url(#goldHdr)" stroke-width="2.4" stroke-linecap="round"/>
+          <polygon points="60,18 62,25 69,27 63,32 65,39 60,35 55,39 57,32 51,27 58,25" fill="url(#goldHdr)"/>
+          <path d="M28 58 Q60 48 92 58" stroke="url(#goldHdr)" stroke-width="1.8"/>
+          <path d="M47 74 Q54 62 60 56 Q66 62 73 74" stroke="url(#goldHdr)" stroke-width="2.4"/>
+          <defs>
+            <linearGradient id="goldHdr" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF5DF" />
+              <stop offset="50%" stop-color="#C5A265" />
+              <stop offset="100%" stop-color="#937237" />
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="flex flex-col">
-          <span class="font-cinzel text-lg md:text-xl font-bold tracking-[0.22em] text-[#F5E6CA] group-hover:text-gold transition-colors">ALTA MAVERA</span>
+          <span class="font-cinzel text-lg md:text-xl font-bold tracking-[0.2em] text-[#F5E6CA] group-hover:text-gold transition-colors">ALTA MAVERA</span>
           <span class="font-montserrat text-[8.5px] uppercase tracking-[0.32em] text-gold/80">Uzbekistan DMC</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[0.24em] uppercase text-zinc-300">
-        <a href="#about" class="hover:text-gold transition-colors duration-300">Философия</a>
-        <a href="#enclaves" class="hover:text-gold transition-colors duration-300">Анклавы</a>
-        <a href="#concierge" class="hover:text-gold transition-colors duration-300">Протокол и Сервис</a>
-        <a href="#journal" class="hover:text-gold transition-colors duration-300">Журнал</a>
-        <a href="#contact" class="hover:text-gold transition-colors duration-300">Контакты</a>
+
+      <!-- Меню -->
+      <nav class="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[0.22em] uppercase text-zinc-300">
+        <a href="#about" class="hover:text-gold transition-colors">Философия</a>
+        <a href="#enclaves" class="hover:text-gold transition-colors">Анклавы</a>
+        <a href="#concierge" class="hover:text-gold transition-colors">Протокол и Сервис</a>
+        <a href="#journal" class="hover:text-gold transition-colors">Журнал</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Контакты</a>
       </nav>
-      <div class="flex items-center gap-4">
-        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold-light border border-gold/40 rounded-sm hover:border-gold hover:bg-gold/10 transition-all duration-300">
-          Спланировать визит
-        </a>
-      </div>
+
+      <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-light border border-gold/40 rounded-sm hover:border-gold hover:bg-gold/10 transition-all">
+        Спланировать визит
+      </a>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ГЛАВНЫЙ ЭКРАН (HERO) -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 z-0 pointer-events-none">
       <div id="slide-0" class="hero-slide active absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg.jpg');"></div>
       <div id="slide-1" class="hero-slide inactive absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg1.jpeg');"></div>
       <div id="slide-2" class="hero-slide inactive absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg2.jpeg');"></div>
       <div id="slide-3" class="hero-slide inactive absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg3.jpeg');"></div>
-      <div class="absolute inset-0 bg-radial-vignette"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/45 to-obsidian/85"></div>
+      
+      <!-- Прозрачная кинематографическая виньетка: без наложений и артефактов -->
+      <div class="absolute inset-0 bg-obsidian-deep/55"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian-deep/75"></div>
     </div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center justify-center py-16">
-      <div class="mb-6 relative group">
-        <img src="logo.PNG" alt="Alta Mavera Crest" class="h-32 sm:h-44 md:h-52 w-auto object-contain mx-auto brand-logo-glow">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center justify-center py-16">
+      
+      <!-- ============================================================== -->
+      <!-- ПОЛНОСТЬЮ ТЕКСТОВЫЙ / ВЕКТОРНЫЙ ЛОГОТИП (БЕЗ ФАЙЛОВ И КАРТИНОК) -->
+      <!-- ============================================================== -->
+      <div class="flex flex-col items-center justify-center mb-6">
+        
+        <!-- Рисунок сверху из макета (Овал, арка, звезда, горы, дорога): 100% прозрачный -->
+        <svg class="w-36 h-28 sm:w-48 sm:h-36 md:w-56 md:h-40 brand-crest-vector transition-transform duration-700 hover:scale-105" viewBox="0 0 200 150" fill="none">
+          <defs>
+            <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF9EC" />
+              <stop offset="35%" stop-color="#E5C384" />
+              <stop offset="70%" stop-color="#B28A47" />
+              <stop offset="100%" stop-color="#DEC080" />
+            </linearGradient>
+            <radialGradient id="starRadial" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="100%" stop-color="#C5A265" />
+            </radialGradient>
+          </defs>
+
+          <!-- Золотой овал -->
+          <ellipse cx="100" cy="72" rx="90" ry="60" stroke="url(#crestGold)" stroke-width="4.2"/>
+          
+          <!-- Восточный портал (купольная арка) -->
+          <path d="M100 20 C76 38 72 68 72 118 L128 118 C128 68 124 38 100 20 Z" stroke="url(#crestGold)" stroke-width="3.8" stroke-linecap="round"/>
+          
+          <!-- Звезда-путеводитель -->
+          <polygon points="100,28 103,42 115,45 105,51 108,63 100,55 92,63 95,51 85,45 97,42" fill="url(#starRadial)"/>
+          
+          <!-- Горные цепи на горизонте -->
+          <path d="M52 92 Q76 78 100 85 Q124 78 148 92" stroke="url(#crestGold)" stroke-width="2.6"/>
+          
+          <!-- Изгиб Шелкового пути к вершинам -->
+          <path d="M78 118 Q89 98 99 90 Q109 98 122 118" stroke="url(#crestGold)" stroke-width="3.4"/>
+          <path d="M88 118 Q96 105 101 99 Q106 105 112 118" stroke="url(#crestGold)" stroke-width="2.2"/>
+        </svg>
+
+        <!-- Надпись ALTA MAVERA шрифтом Cinzel с золотым тиснением -->
+        <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.24em] brand-gold-title mt-2">
+          ALTA MAVERA
+        </h1>
+
+        <!-- Тонкая разделительная полоса с ромбом-звездой как в макете -->
+        <div class="flex items-center justify-center gap-3 w-64 sm:w-80 md:w-96 my-2">
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+          <span class="text-gold text-xs leading-none">✦</span>
+          <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/80 to-transparent"></span>
+        </div>
+
       </div>
-      <p id="hero-subtitle" class="font-montserrat text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.38em] uppercase text-gold transition-opacity duration-1000 mb-3">
+
+      <p id="hero-subtitle" class="font-montserrat text-[10px] sm:text-xs font-semibold tracking-[0.38em] uppercase text-gold mb-3">
         УЗБЕКИСТАН · ЧАСТНАЯ АВИАЦИЯ И ПРИВАТНЫЙ КОНСЬЕРЖ-СЕРВИС
       </p>
-      <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-bold tracking-monumental text-white drop-shadow-2xl mb-4">
-        ALTA MAVERA
-      </h1>
-      <div class="flex items-center justify-center gap-4 w-full max-w-xl my-2">
-        <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/60 to-transparent"></span>
-        <span class="font-cinzel text-xs sm:text-sm md:text-base tracking-[0.45em] text-[#EFE2C8] uppercase font-semibold">
+
+      <div class="flex items-center justify-center gap-4 w-full max-w-md my-2">
+        <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent"></span>
+        <span class="font-cinzel text-xs sm:text-sm tracking-[0.45em] text-[#EFE2C8] uppercase font-semibold">
           TRUST. STATUS. HEIGHTS.
         </span>
-        <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/60 to-transparent"></span>
+        <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent"></span>
       </div>
-      <p class="max-w-2xl text-xs sm:text-sm md:text-base font-light text-zinc-300 leading-relaxed mt-4 mb-8">
-        Принимающий DMC-партнер в Узбекистане класса Quiet Luxury. Закрытый доступ к историческим памятникам, дипломатический CIP-протокол и авиация над вершинами Тянь-Шаня.
+
+      <p class="max-w-xl text-xs sm:text-sm font-light text-zinc-300 leading-relaxed mt-4 mb-8">
+        Принимающий партнер в Узбекистане класса Quiet Luxury. Закрытый доступ к историческим памятникам, дипломатический CIP-протокол и авиация над вершинами Тянь-Шаня.
       </p>
+
       <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#C5A265] via-[#D8B67D] to-[#9E7E44] text-obsidian-deep font-semibold text-xs uppercase tracking-[0.24em] rounded-sm hover:brightness-110 shadow-[0_4px_25px_rgba(197,162,101,0.35)] transition-all">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#C5A265] via-[#D8B67D] to-[#9E7E44] text-obsidian-deep font-semibold text-xs uppercase tracking-[0.24em] rounded-sm hover:brightness-110 shadow-[0_4px_25px_rgba(197,162,101,0.3)] transition-all">
           Запросить частный маршрут
         </a>
         <a href="#enclaves" class="w-full sm:w-auto px-8 py-3.5 border border-zinc-500/70 text-zinc-200 text-xs uppercase tracking-[0.22em] rounded-sm hover:border-gold hover:text-gold transition-all">
           Исследовать анклавы
         </a>
       </div>
+
+      <!-- Переключатели слайдов -->
       <div class="flex items-center gap-3 mt-12">
-        <button onclick="setSlide(0)" class="slide-indicator w-8 h-1 rounded-full bg-gold transition-all duration-500"></button>
-        <button onclick="setSlide(1)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500"></button>
-        <button onclick="setSlide(2)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500"></button>
-        <button onclick="setSlide(3)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500"></button>
+        <button onclick="setSlide(0)" class="slide-indicator w-8 h-1 rounded-full bg-gold transition-all duration-500" aria-label="Слайд 1"></button>
+        <button onclick="setSlide(1)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500" aria-label="Слайд 2"></button>
+        <button onclick="setSlide(2)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500" aria-label="Слайд 3"></button>
+        <button onclick="setSlide(3)" class="slide-indicator w-3 h-1 rounded-full bg-zinc-600 hover:bg-gold/60 transition-all duration-500" aria-label="Слайд 4"></button>
       </div>
+
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-28 px-6 md:px-12 bg-obsidian border-b border-obsidian-border/50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <span class="text-[11px] font-semibold uppercase tracking-[0.34em] text-gold block mb-3">Земли Трансоксианы</span>
-        <h2 class="font-cinzel text-3xl md:text-5xl font-normal tracking-wide text-[#FBF9F5] mb-6">Наследие в бирюзе и шелке</h2>
-        <div class="w-16 h-[1px] bg-gold mx-auto mb-6"></div>
-        <p class="text-zinc-400 font-light text-sm md:text-base leading-relaxed">
-          Alta Mavera распахивает кованые резные кедровые двери туда, куда закрыт публичный доступ: в закрытые музейные хранилища, частные медресе XVI века и уединенные горные оазисы.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm hover:border-gold/50 transition-all">
+  <!-- ФИЛОСОФИЯ -->
+  <section id="about" class="py-24 px-6 md:px-12 bg-obsidian border-b border-obsidian-border/50">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.32em] text-gold block mb-3">Земли Трансоксианы</span>
+      <h2 class="font-cinzel text-3xl md:text-4xl text-white mb-6">Наследие в бирюзе и шелке</h2>
+      <div class="w-16 h-[1px] bg-gold mx-auto mb-6"></div>
+      <p class="max-w-3xl mx-auto text-zinc-400 font-light text-sm md:text-base leading-relaxed mb-16">
+        Alta Mavera распахивает кованые резные кедровые двери туда, куда закрыт публичный доступ: в закрытые музейные хранилища, частные медресе XVI века и уединенные горные оазисы.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm">
           <div class="text-gold font-cinzel text-2xl mb-4">01 / ПРИВАТНОСТЬ</div>
           <h3 class="font-cinzel text-lg text-white mb-3">Закрытый доступ</h3>
           <p class="text-zinc-400 text-xs leading-relaxed font-light">Индивидуальное посещение площади Регистан и обсерватории Улугбека в сумерках при персональной подсветке.</p>
         </div>
-        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm hover:border-gold/50 transition-all">
+        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm">
           <div class="text-gold font-cinzel text-2xl mb-4">02 / ГАСТРОНОМИЯ</div>
           <h3 class="font-cinzel text-lg text-white mb-3">Кулинарный кутюр</h3>
           <p class="text-zinc-400 text-xs leading-relaxed font-light">Камерные ужины от именитых бренд-шефов в старинных караван-сараях под аккомпанемент классического макома.</p>
         </div>
-        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm hover:border-gold/50 transition-all">
+        <div class="bg-obsidian-surface/60 border border-obsidian-border p-8 rounded-sm">
           <div class="text-gold font-cinzel text-2xl mb-4">03 / ВЫСОТА</div>
           <h3 class="font-cinzel text-lg text-white mb-3">Вертолетные сафари</h3>
           <p class="text-zinc-400 text-xs leading-relaxed font-light">Прямые перелеты в труднодоступные ущелья Западного Тянь-Шаня и альпийские пикники на высоте 3200 метров.</p>
@@ -143,100 +229,100 @@
     </div>
   </section>
 
-  <!-- ENCLAVES (Ivory block) -->
-  <section id="enclaves" class="py-28 px-6 md:px-12 bg-ivory text-ivory-dark">
+  <!-- СВЕТЛЫЙ БЛОК IVORY: АНКЛАВЫ -->
+  <section id="enclaves" class="py-24 px-6 md:px-12 bg-ivory text-ivory-dark">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-muted block mb-2">Избранные локации</span>
-        <h2 class="font-cinzel text-3xl md:text-5xl font-semibold text-ivory-dark mb-4">Анклавы Узбекистана</h2>
-        <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-8">
-          <button onclick="filterEnclaves('all')" class="filter-btn active px-5 py-2 text-xs uppercase tracking-widest font-semibold rounded-full bg-obsidian text-white border border-obsidian transition-all">Все анклавы</button>
-          <button onclick="filterEnclaves('heritage')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted transition-all">Наследие</button>
-          <button onclick="filterEnclaves('epicurean')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted transition-all">Гастрономия</button>
-          <button onclick="filterEnclaves('aerial')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted transition-all">Природа и Авиация</button>
+        <h2 class="font-cinzel text-3xl md:text-4xl text-ivory-dark font-semibold mb-4">Анклавы Узбекистана</h2>
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+          <button onclick="filterEnclaves('all')" class="filter-btn active px-5 py-2 text-xs uppercase tracking-widest font-semibold rounded-full bg-obsidian text-white border border-obsidian">Все анклавы</button>
+          <button onclick="filterEnclaves('heritage')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted">Наследие</button>
+          <button onclick="filterEnclaves('epicurean')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted">Гастрономия</button>
+          <button onclick="filterEnclaves('aerial')" class="filter-btn px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full bg-white text-ivory-muted border border-ivory-border hover:border-gold-muted">Природа и Авиация</button>
         </div>
       </div>
 
       <div id="enclaves-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm hover:shadow-xl transition-all" data-category="heritage">
-          <div class="relative h-64 overflow-hidden"><img src="hero-bg.jpg" alt="Самарканд Регистан" class="w-full h-full object-cover"></div>
+        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm" data-category="heritage">
+          <div class="relative h-60 overflow-hidden"><img src="hero-bg.jpg" alt="Самарканд" class="w-full h-full object-cover"></div>
           <div class="p-6">
             <span class="text-xs uppercase tracking-widest text-gold-muted font-medium">Самарканд</span>
             <h3 class="font-cinzel text-xl text-ivory-dark font-semibold mt-1 mb-2">Сумерки Регистана</h3>
-            <p class="text-ivory-muted text-xs leading-relaxed font-light mb-4">Приватное открытие ансамбля площади под покровом ночи без посторонних с персональной подсветкой.</p>
+            <p class="text-ivory-muted text-xs leading-relaxed font-light">Приватное открытие ансамбля площади под покровом ночи без посторонних с персональной подсветкой.</p>
           </div>
         </div>
-        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm hover:shadow-xl transition-all" data-category="epicurean">
-          <div class="relative h-64 overflow-hidden"><img src="hero-bg1.jpeg" alt="Бухара Медресе" class="w-full h-full object-cover"></div>
+        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm" data-category="epicurean">
+          <div class="relative h-60 overflow-hidden bg-zinc-900"><img src="hero-bg1.jpeg" alt="Бухара Медресе" class="w-full h-full object-cover"></div>
           <div class="p-6">
             <span class="text-xs uppercase tracking-widest text-gold-muted font-medium">Бухара</span>
             <h3 class="font-cinzel text-xl text-ivory-dark font-semibold mt-1 mb-2">Трапеза в закрытом медресе</h3>
-            <p class="text-ivory-muted text-xs leading-relaxed font-light mb-4">Сотни живых свечей во внутреннем дворе XVI века и традиционный маком для узкого круга гостей.</p>
+            <p class="text-ivory-muted text-xs leading-relaxed font-light">Сотни живых свечей во внутреннем дворе XVI века и традиционный маком для узкого круга гостей.</p>
           </div>
         </div>
-        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm hover:shadow-xl transition-all" data-category="aerial">
-          <div class="relative h-64 overflow-hidden"><img src="hero-bg3.jpeg" alt="Тянь-Шань" class="w-full h-full object-cover"></div>
+        <div class="enclave-card group bg-white border border-ivory-border overflow-hidden rounded-sm shadow-sm" data-category="aerial">
+          <div class="relative h-60 overflow-hidden bg-zinc-900"><img src="hero-bg3.jpeg" alt="Тянь-Шань" class="w-full h-full object-cover"></div>
           <div class="p-6">
             <span class="text-xs uppercase tracking-widest text-gold-muted font-medium">Западный Тянь-Шань</span>
             <h3 class="font-cinzel text-xl text-ivory-dark font-semibold mt-1 mb-2">Альпийское вертолетное сафари</h3>
-            <p class="text-ivory-muted text-xs leading-relaxed font-light mb-4">Чартерный полет над заснеженными пиками и высадка на приватном плато у ледникового озера.</p>
+            <p class="text-ivory-muted text-xs leading-relaxed font-light">Чартерный полет над заснеженными пиками и высадка на приватном плато у ледникового озера.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROTOCOL -->
-  <section id="concierge" class="py-28 px-6 md:px-12 bg-obsidian-surface border-b border-obsidian-border/60">
+  <!-- СЕРВИС И ПРОТОКОЛ -->
+  <section id="concierge" class="py-24 px-6 md:px-12 bg-obsidian-surface border-b border-obsidian-border/60">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <span class="text-[11px] font-semibold uppercase tracking-[0.34em] text-gold block mb-3">Безупречный стандарт</span>
-        <h2 class="font-cinzel text-3xl md:text-5xl font-medium tracking-wide text-white mb-4">Консьерж и Протокол</h2>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.32em] text-gold block mb-2">Безупречный стандарт</span>
+        <h2 class="font-cinzel text-3xl md:text-4xl text-white">Консьерж и Протокол</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-obsidian-card p-8 md:p-10 border border-obsidian-border rounded-sm">
-          <div class="text-gold font-cinzel text-3xl mb-6">01</div>
-          <h3 class="font-cinzel text-xl text-white font-medium mb-3">VIP / CIP Протокол</h3>
-          <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed">Встреча у трапа воздушного судна, индивидуальное прохождение границы в изолированных CIP-залах.</p>
+        <div class="bg-obsidian-card p-8 border border-obsidian-border rounded-sm">
+          <div class="text-gold font-cinzel text-3xl mb-4">01</div>
+          <h3 class="font-cinzel text-lg text-white font-medium mb-3">VIP / CIP Протокол</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed font-light">Встреча у трапа воздушного судна, индивидуальное прохождение границы в изолированных CIP-залах.</p>
         </div>
-        <div class="bg-obsidian-card p-8 md:p-10 border border-obsidian-border rounded-sm">
-          <div class="text-gold font-cinzel text-3xl mb-6">02</div>
-          <h3 class="font-cinzel text-xl text-white font-medium mb-3">Представительский флот</h3>
-          <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed">Mercedes-Maybach и Range Rover с подготовленными водителями со знанием дипломатического протокола.</p>
+        <div class="bg-obsidian-card p-8 border border-obsidian-border rounded-sm">
+          <div class="text-gold font-cinzel text-3xl mb-4">02</div>
+          <h3 class="font-cinzel text-lg text-white font-medium mb-3">Представительский флот</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed font-light">Mercedes-Maybach и Range Rover с подготовленными водителями со знанием дипломатического протокола.</p>
         </div>
-        <div class="bg-obsidian-card p-8 md:p-10 border border-obsidian-border rounded-sm">
-          <div class="text-gold font-cinzel text-3xl mb-6">03</div>
-          <h3 class="font-cinzel text-xl text-white font-medium mb-3">24/7 Консьерж</h3>
-          <p class="text-zinc-400 text-xs md:text-sm font-light leading-relaxed">Персональный куратор, решающий любые нестандартные задачи от закрытых показов до авиа-слотов.</p>
+        <div class="bg-obsidian-card p-8 border border-obsidian-border rounded-sm">
+          <div class="text-gold font-cinzel text-3xl mb-4">03</div>
+          <h3 class="font-cinzel text-lg text-white font-medium mb-3">24/7 Консьерж</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed font-light">Персональный куратор, решающий любые нестандартные задачи от закрытых показов до авиа-слотов.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-28 px-6 md:px-12 bg-obsidian-deep relative border-t border-obsidian-border">
+  <!-- ФОРМА СВЯЗИ -->
+  <section id="contact" class="py-24 px-6 md:px-12 bg-obsidian-deep border-t border-obsidian-border">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <span class="text-[11px] font-semibold uppercase tracking-[0.32em] text-gold block mb-2">Начните диалог</span>
-        <h2 class="font-cinzel text-3xl md:text-5xl text-white mb-4">Спланируйте частное путешествие</h2>
+        <h2 class="font-cinzel text-3xl md:text-4xl text-white mb-3">Спланируйте частное путешествие</h2>
       </div>
       <form id="journey-form" onsubmit="event.preventDefault(); document.getElementById('form-status').classList.remove('hidden');" class="space-y-6 bg-obsidian-card p-8 md:p-12 border border-obsidian-border rounded-sm">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2 font-medium">Ваше Имя и Фамилия</label>
-            <input type="text" required placeholder="Константин Романов" class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold">
+            <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2">Ваше Имя и Фамилия</label>
+            <input type="text" required placeholder="Константин Романов" class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3 text-sm text-white focus:outline-none focus:border-gold">
           </div>
           <div>
-            <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2 font-medium">Email / Телефон</label>
-            <input type="text" required placeholder="client@domain.com / +7 (999) 000-00-00" class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold">
+            <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2">Email / Телефон</label>
+            <input type="text" required placeholder="client@domain.com / +7 (999) 000-00-00" class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3 text-sm text-white focus:outline-none focus:border-gold">
           </div>
         </div>
         <div>
-          <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2 font-medium">Особые пожелания и даты</label>
-          <textarea rows="4" placeholder="Индивидуальное меню, вертолетный трансфер, количество гостей..." class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold"></textarea>
+          <label class="block text-[11px] uppercase tracking-widest text-zinc-400 mb-2">Особые пожелания и даты</label>
+          <textarea rows="3" placeholder="Индивидуальное меню, вертолетный трансфер, количество гостей..." class="w-full bg-obsidian-surface border border-obsidian-border px-4 py-3 text-sm text-white focus:outline-none focus:border-gold"></textarea>
         </div>
-        <div class="pt-2 text-center">
-          <button type="submit" class="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-[#C5A265] via-[#D8B67D] to-[#9E7E44] text-obsidian-deep font-semibold text-xs uppercase tracking-[0.26em] rounded-sm hover:brightness-110 transition-all">
+        <div class="text-center pt-2">
+          <button type="submit" class="px-10 py-3.5 bg-gradient-to-r from-[#C5A265] via-[#D8B67D] to-[#9E7E44] text-obsidian-deep font-semibold text-xs uppercase tracking-[0.24em] rounded-sm hover:brightness-110 transition-all">
             Отправить приватный запрос
           </button>
           <p id="form-status" class="text-xs text-gold mt-4 hidden">Спасибо. Наш старший куратор свяжется с вами в течение 2 часов.</p>
@@ -245,16 +331,32 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="py-14 px-6 md:px-12 bg-obsidian-deep border-t border-obsidian-border/50 text-center">
-    <div class="max-w-5xl mx-auto flex flex-col items-center">
-      <img src="logo.PNG" alt="Alta Mavera Footer Logo" class="h-14 w-auto object-contain mb-4 brand-logo-glow opacity-85">
-      <span class="font-cinzel text-xl font-bold tracking-[0.24em] text-white">ALTA MAVERA</span>
+  <!-- ПОДВАЛ -->
+  <footer class="py-12 px-6 bg-obsidian-deep border-t border-obsidian-border/50 text-center">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      
+      <!-- Прозрачный герб в подвале -->
+      <svg class="h-11 w-11 text-gold brand-crest-vector mb-2.5" viewBox="0 0 120 90" fill="none">
+        <ellipse cx="60" cy="45" rx="54" ry="38" stroke="url(#goldFtr)" stroke-width="2.8"/>
+        <path d="M60 12 C44 24 41 42 41 74 L79 74 C79 42 76 24 60 12 Z" stroke="url(#goldFtr)" stroke-width="2.4" stroke-linecap="round"/>
+        <polygon points="60,18 62,25 69,27 63,32 65,39 60,35 55,39 57,32 51,27 58,25" fill="url(#goldFtr)"/>
+        <path d="M47 74 Q54 62 60 56 Q66 62 73 74" stroke="url(#goldFtr)" stroke-width="2.4"/>
+        <defs>
+          <linearGradient id="goldFtr" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFF5DF" />
+            <stop offset="50%" stop-color="#C5A265" />
+            <stop offset="100%" stop-color="#937237" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <span class="font-cinzel text-lg font-bold tracking-[0.2em] text-white">ALTA MAVERA</span>
       <span class="font-montserrat text-[9px] tracking-[0.35em] uppercase text-gold my-1">TRUST. STATUS. HEIGHTS.</span>
-      <p class="text-zinc-600 text-xs font-light mt-6">© 2026 Alta Mavera DMC. Все права защищены. Эксклюзивный принимающий партнер в Узбекистане.</p>
+      <p class="text-zinc-600 text-xs font-light mt-4">© 2026 Alta Mavera DMC. Все права защищены. Принимающий партнер в Узбекистане.</p>
     </div>
   </footer>
 
+  <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ФОНОВ И ФИЛЬТРАЦИИ -->
   <script>
     const slides = [
       { id: 'slide-0', subtitle: 'УЗБЕКИСТАН · ЧАСТНАЯ АВИАЦИЯ И ПРИВАТНЫЙ КОНСЬЕРЖ-СЕРВИС' },
@@ -279,7 +381,7 @@
         setTimeout(() => {
           subEl.innerText = slides[currentSlide].subtitle;
           subEl.style.opacity = '1';
-        }, 350);
+        }, 300);
       }
       const indicators = document.querySelectorAll('.slide-indicator');
       indicators.forEach((ind, i) => {
@@ -291,7 +393,7 @@
     setInterval(() => {
       let next = (currentSlide + 1) % slides.length;
       setSlide(next);
-    }, 5000);
+    }, 5500);
 
     function filterEnclaves(category) {
       const cards = document.querySelectorAll('.enclave-card');
